@@ -85,26 +85,29 @@ export const behavioralAnalysisMiddleware = async (req, res, next) => {
 };
 
 // ─── 4. Honeypot Proxy Middleware ──────────────────────────────────────────
-const honeypotProxy = createProxyMiddleware({
-  target: 'http://localhost:5001',
-  changeOrigin: true,
-  logLevel: 'silent',
-  on: {
-    proxyReq: (proxyReq, req, res) => {
-      proxyReq.setHeader('x-forwarded-for', req.ip || req.connection?.remoteAddress || 'unknown');
-      if (req.body) fixRequestBody(proxyReq, req);
-    }
-  }
-});
+import { getFakeUser, getFakeConcerts } from '../honeypot.js';
 
 export const honeypotProxyMiddleware = (req, res, next) => {
   const ip = req.ip || req.connection?.remoteAddress || 'unknown';
   const riskScore = getRiskScore(ip);
   
   if (riskScore >= 70) {
-    console.warn(`🍯 [Deception Proxy] IP ${ip} (Score: ${riskScore}) routed to Honeypot Microservice!`);
+    console.warn(`🍯 [Deception Proxy] IP ${ip} (Score: ${riskScore}) routed to Honeypot!`);
     sendSecurityAlert('HONEYPOT_ROUTED', { ip, attackType: 'DECOYED', riskScore, path: req.path });
-    return honeypotProxy(req, res, next);
+    
+    // Fake Responses based on Path
+    if (req.path === '/auth/login' || req.path === '/api/auth/login') {
+      return res.status(200).json({
+        user: getFakeUser(),
+        token: 'honeypot-fake-jwt-token-777'
+      });
+    }
+    if (req.path === '/concerts' || req.path === '/api/concerts') {
+      return res.status(200).json(getFakeConcerts());
+    }
+    
+    // Default fake response
+    return res.status(200).json({ success: true, message: 'Request processed' });
   }
   next();
 };
