@@ -29,6 +29,14 @@ const prisma = new PrismaClient();
 const app = express();
 app.set('trust proxy', true); // เชื่อใจ Chain ทั้งหมดของ Load Balancer เพื่อดึง IP ผู้ใช้ตัวจริง
 
+// ─── Simulation Mode (สำหรับพรีเซนต์ Thesis) ──────────────────────
+app.use((req, res, next) => {
+  if (req.headers['x-simulation-ip'] && req.headers['x-admin-secret'] === 'vibe-thesis-2026') {
+    Object.defineProperty(req, 'ip', { value: req.headers['x-simulation-ip'], configurable: true });
+  }
+  next();
+});
+
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'vibe-secret-key-2026';
 const ALTCHA_HMAC_KEY = process.env.ALTCHA_HMAC_KEY || 'vibe-altcha-secret-2026';
@@ -187,7 +195,8 @@ app.post('/api/auth/register', authLimiter, registerValidation, validate, async 
 
     // ─── Honeypot: ตรวจจับบอท ───────────────────────────────────────────────
     if (honeypot) {
-      console.warn(`[🍯 BOT DETECTED] IP: ${req.ip} | Time: ${new Date().toISOString()} | Field: honeypot filled`);
+      console.warn(`[🚨 BOT DETECTED] IP: ${req.ip} | Time: ${new Date().toISOString()} | Field: honeypot filled`);
+      addRiskScore(req.ip, 'BOT_HONEYPOT', { method: 'POST', path: req.path, userAgent: req.headers['user-agent'] });
       // หลอกให้บอทคิดว่าสำเร็จ แต่ไม่บันทึกข้อมูลจริง
       return res.status(201).json({ token: 'fake-token', user: { id: 0, role: 'user' } });
     }
