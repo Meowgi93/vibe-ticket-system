@@ -1,0 +1,75 @@
+// This is the Honeypot database schema (honeypot.db)
+// Mirrors real DB structure but stores fake data + attack logs
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/honeypot-client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./honeypot.db"
+}
+
+// ── Fake data models (mirrors real DB to fool attackers) ─────────────────────
+
+model FakeUser {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  fullName  String
+  email     String   @unique
+  phone     String
+  password  String
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+  tickets   FakeTicket[]
+}
+
+model FakeConcert {
+  id          Int    @id @default(autoincrement())
+  title       String
+  artist      String
+  date        String
+  venue       String
+  priceRange  String
+  tickets     FakeTicket[]
+}
+
+model FakeTicket {
+  id        Int         @id @default(autoincrement())
+  user      FakeUser    @relation(fields: [userId], references: [id])
+  userId    Int
+  concert   FakeConcert @relation(fields: [concertId], references: [id])
+  concertId Int
+  totalPaid Int
+  status    String      @default("confirmed")
+  createdAt DateTime    @default(now())
+}
+
+// ── Attack Log (เก็บพฤติกรรมของแฮกเกอร์ทุกอย่าง) ───────────────────────────
+
+model AttackLog {
+  id          Int      @id @default(autoincrement())
+  ip          String
+  method      String                   // GET, POST, PUT, DELETE
+  path        String                   // /api/auth/login
+  payload     String?                  // JSON string of request body (sanitized)
+  attackType  String                   // BRUTE_FORCE, SQL_INJECTION, BOT, SCAN, SUSPICIOUS
+  riskScore   Int                      // 0-100
+  userAgent   String?
+  isDecoyed   Boolean  @default(false) // ถูกเบี่ยงเบนไป Honeypot แล้วหรือยัง
+  createdAt   DateTime @default(now())
+}
+
+// ── IP Risk Tracking ─────────────────────────────────────────────────────────
+
+model IpRisk {
+  id            Int      @id @default(autoincrement())
+  ip            String   @unique
+  riskScore     Int      @default(0)  // 0-100
+  failedLogins  Int      @default(0)
+  scanAttempts  Int      @default(0)
+  isDecoyed     Boolean  @default(false)
+  firstSeen     DateTime @default(now())
+  lastSeen      DateTime @default(now())
+}

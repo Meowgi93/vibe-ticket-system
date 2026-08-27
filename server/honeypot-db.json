@@ -1,0 +1,515 @@
+{
+  "login": [
+    {
+      "email": "naan03.n@gmail.com",
+      "password": "Nittaya",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 5,
+          "stdDev": 0,
+          "keyCount": 2,
+          "totalTime": 5
+        },
+        "mouse": {
+          "totalDistance": 685.9572225706349,
+          "avgSpeed": 784.8480807444336,
+          "straightLineRatio": 0.5671076200547386,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 120737
+        },
+        "scroll": {
+          "scrollCount": 9,
+          "maxDepth": 0.26666666666666666,
+          "directionChanges": 1
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 1
+    },
+    {
+      "email": "naan03.n@gmail.com",
+      "password": "Nittaya",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 2,
+          "stdDev": 0,
+          "keyCount": 2,
+          "totalTime": 2
+        },
+        "mouse": {
+          "totalDistance": 707.0588267140154,
+          "avgSpeed": 969.9023686063312,
+          "straightLineRatio": 0.9892900188899497,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 1190
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 2
+    },
+    {
+      "email": "naan03.n@gmail.com",
+      "password": "Nittaya",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 3,
+          "stdDev": 0,
+          "keyCount": 2,
+          "totalTime": 3
+        },
+        "mouse": {
+          "totalDistance": 8027.228847381598,
+          "avgSpeed": 150.50301573761809,
+          "straightLineRatio": 0.0895957777788361,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 53536
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 3
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 5467.833333333333,
+          "stdDev": 7691.396024490973,
+          "keyCount": 7,
+          "totalTime": 32807
+        },
+        "mouse": {
+          "totalDistance": 4211.227758252362,
+          "avgSpeed": 125.09959772606014,
+          "straightLineRatio": 0.17157416548274398,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 34201
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 4
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 1055.4193548387098,
+          "stdDev": 1029.2235649858412,
+          "keyCount": 32,
+          "totalTime": 32718
+        },
+        "mouse": {
+          "totalDistance": 1805.8422277133923,
+          "avgSpeed": 53.6877817729038,
+          "straightLineRatio": 0.42734818368938365,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 34021
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 5
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 1321.304347826087,
+          "stdDev": 1534.7757925701583,
+          "keyCount": 24,
+          "totalTime": 30390
+        },
+        "mouse": {
+          "totalDistance": 4753.721122555528,
+          "avgSpeed": 125.54393562803455,
+          "straightLineRatio": 0.022705405500647084,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 38657
+        },
+        "scroll": {
+          "scrollCount": 37,
+          "maxDepth": 0.8333333333333334,
+          "directionChanges": 1
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 6
+    },
+    {
+      "email": "admin' OR 1=1 --",
+      "password": "hackme",
+      "id": 7
+    },
+    {
+      "email": "admin' OR 1=1 --",
+      "password": "hackme",
+      "id": 8
+    },
+    {
+      "email": "admin' OR 1=1 --",
+      "password": "hackme",
+      "id": 9
+    },
+    {
+      "email": "admin' OR 1=1 --",
+      "password": "hackme",
+      "id": 10
+    },
+    {
+      "email": "<script>alert('Hack!')</script>",
+      "password": "hackme",
+      "id": 11
+    },
+    {
+      "email": "<script>alert('Hack!')</script>",
+      "password": "hackme",
+      "id": 12
+    },
+    {
+      "email": "test@vibe.com",
+      "password": "123",
+      "id": 13
+    },
+    {
+      "email": "bot@vibe.com",
+      "password": "botpassword",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 0,
+          "stdDev": 0,
+          "keyCount": 10
+        },
+        "mouse": {
+          "hasMovement": false
+        },
+        "dwell": {
+          "pageLoadToSubmit": 150
+        }
+      },
+      "id": 14
+    },
+    {
+      "email": "bot@vibe.com",
+      "password": "botpassword",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 0,
+          "stdDev": 0,
+          "keyCount": 10
+        },
+        "mouse": {
+          "hasMovement": false
+        },
+        "dwell": {
+          "pageLoadToSubmit": 150
+        }
+      },
+      "id": 15
+    },
+    {
+      "email": "bot@vibe.com",
+      "password": "botpassword",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 0,
+          "stdDev": 0,
+          "keyCount": 10
+        },
+        "mouse": {
+          "hasMovement": false
+        },
+        "dwell": {
+          "pageLoadToSubmit": 150
+        }
+      },
+      "id": 16
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "id": 17
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 1090.4782608695652,
+          "stdDev": 983.3140446454406,
+          "keyCount": 24,
+          "totalTime": 25081
+        },
+        "mouse": {
+          "totalDistance": 2083.0853560124297,
+          "avgSpeed": 77.14559499342381,
+          "straightLineRatio": 0.14500348242979919,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 27177
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 18
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 1110.8148148148148,
+          "stdDev": 1233.6526624752905,
+          "keyCount": 28,
+          "totalTime": 29992
+        },
+        "mouse": {
+          "totalDistance": 4357.107471833428,
+          "avgSpeed": 101.80633375002166,
+          "straightLineRatio": 0.18183484057808358,
+          "hasMovement": true
+        },
+        "dwell": {
+          "pageLoadToSubmit": 43148
+        },
+        "scroll": {
+          "scrollCount": 0,
+          "maxDepth": 0,
+          "directionChanges": 0
+        },
+        "touch": {
+          "hasTouch": false,
+          "touchEventCount": 0
+        },
+        "device": {
+          "isMobile": false
+        },
+        "automation": {
+          "automationSignals": {
+            "webdriver": false,
+            "headlessUA": false,
+            "noPlugins": false,
+            "zeroScreen": false,
+            "noLanguages": false
+          },
+          "automationScore": 0
+        }
+      },
+      "id": 19
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "id": 20
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 0,
+          "stdDev": 0,
+          "keyCount": 10
+        },
+        "mouse": {
+          "hasMovement": false
+        },
+        "dwell": {
+          "pageLoadToSubmit": 100
+        }
+      },
+      "id": 21
+    },
+    {
+      "email": "admin' OR 1=1 --",
+      "password": "hack",
+      "id": 22
+    },
+    {
+      "email": "<script>alert('Hack')</script>",
+      "password": "123",
+      "id": 23
+    },
+    {
+      "email": "admin@vibe.com",
+      "password": "Admin1234",
+      "behavior": {
+        "keystroke": {
+          "avgLatency": 0,
+          "stdDev": 0,
+          "keyCount": 10
+        },
+        "mouse": {
+          "hasMovement": false
+        },
+        "dwell": {
+          "pageLoadToSubmit": 100
+        }
+      },
+      "id": 24
+    }
+  ],
+  "concerts": [
+    {
+      "id": 1,
+      "title": "Decoy Festival 2026",
+      "artist": "The Fake Band",
+      "date": "2026-12-31",
+      "time": "18:00",
+      "venue": "Honeypot Arena",
+      "location": "Virtual Space",
+      "status": "Available",
+      "priceRange": "฿1,500 - ฿3,500"
+    }
+  ],
+  "tickets": []
+}
