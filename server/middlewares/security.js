@@ -33,6 +33,14 @@ export const threatDetectionMiddleware = (req, res, next) => {
     console.warn(`🛡️ [Malicious Header] IP: ${ip} | UA: ${userAgent}`);
   }
 
+  // 🛡️ Path Scanner Detection (หาไฟล์ลับ)
+  const forbiddenPaths = ['.env', 'adminer', 'phpmyadmin', 'config', 'wp-admin', '.git'];
+  if (forbiddenPaths.some(p => req.path.toLowerCase().includes(p))) {
+    addRiskScore(ip, 'PATH_SCAN', { method: req.method, path: req.path, userAgent });
+    console.warn(`🔍 [Path Scan] IP: ${ip} | Path: ${req.path}`);
+    return res.status(404).send('404 Not Found'); 
+  }
+
   next();
 };
 
