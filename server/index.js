@@ -862,7 +862,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 
   // Catch-all route คืนค่า index.html ให้ React Router จัดการ
-  app.get('*', (req, res) => {
+  app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
   });
 } else {
