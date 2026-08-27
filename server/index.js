@@ -27,7 +27,7 @@ const __dirname = path.dirname(__filename);
 
 const prisma = new PrismaClient();
 const app = express();
-app.set('trust proxy', 1); // ตั้งค่าเป็น 1 เพื่อให้อ่าน IP จริงผ่าน Load Balancer ของ Render ได้ถูกต้อง
+app.set('trust proxy', true); // เชื่อใจ Chain ทั้งหมดของ Load Balancer เพื่อดึง IP ผู้ใช้ตัวจริง
 
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'vibe-secret-key-2026';
